@@ -1,0 +1,13 @@
+/* Write your CSS here */
+.button {
+  background-color: #585076;
+  border-width: 0px;
+  width: 80px;
+  min-width: 70opx;
+  max-width: 800px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  color: #ffffff;
+  margin-right: 24px;
+}
