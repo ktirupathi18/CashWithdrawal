@@ -6,14 +6,15 @@ import {Component} from 'react'
 
 import DenominationItems from '../DenominationItem/index'
 
-const denomList = [
-  {id: 1, value: 50},
-  {id: 2, value: 100},
-  {id: 3, value: 200},
-  {id: 4, value: 400},
-]
+let denominations
 
-class CashWithdrawal extends Component {
+const CashWithdrawal = props => {
+  const {denominationsList} = props
+  denominations = denominationsList
+  return <CashWithdrawaler />
+}
+
+class CashWithdrawaler extends Component {
   state = {price: 2000}
 
   onClicker = value => {
@@ -45,10 +46,10 @@ class CashWithdrawal extends Component {
           <p className="withdraw">Withdraw</p>
           <p className="chosoe">Choose Sum (in Rupees)</p>
           <ul className="card-hold">
-            {denomList.map(each => (
+            {denominations.map(each => (
               <li type="none" key={each.id}>
                 <DenominationItems
-                  value={each.value}
+                  details={each}
                   onClicker={this.onClicker}
                   key={each.value}
                 />

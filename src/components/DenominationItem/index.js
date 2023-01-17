@@ -2,7 +2,8 @@
 import './index.css'
 
 const DenominationItems = props => {
-  const {value, onClicker} = props
+  const {details, onClicker} = props
+  const {value} = details
   const onClickFun = () => {
     onClicker(value)
   }
